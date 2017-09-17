@@ -12,6 +12,11 @@ module.exports = {
         filename: 'bundle.js'
     },
 
+    devServer: {
+        // the name of the path on the server where you expect bundle to be
+        publicPath: '/public/'
+    },
+
     resolve: {
         extensions: ['.js', '.jsx', '.json']
     },
