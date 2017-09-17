@@ -5,7 +5,8 @@
     "lint":
       "/Users/holmium4/code/learning_react/frontEndMasters/complete-intro-to-react/node_modules/.bin/eslint **/*.{js,jsx} --quiet",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "dependencies": {
     "axios": "0.16.1",

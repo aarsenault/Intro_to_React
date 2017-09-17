@@ -14,7 +14,8 @@ module.exports = {
 
     devServer: {
         // the name of the path on the server where you expect bundle to be
-        publicPath: '/public/'
+        publicPath: '/public/',
+        historyApiFallback: true
     },
 
     resolve: {
