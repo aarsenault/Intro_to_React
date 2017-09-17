@@ -24,6 +24,15 @@ module.exports = {
 
     module: {
         rules: [
+            // runs all js through elsint outputs errors to console
+            {
+                enforce: 'pre', // pre insures BEFORE babel
+                test: /\.jsx?$/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/ // don't run on code from modules
+            },
+
+            // passes all js files to bable
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader'

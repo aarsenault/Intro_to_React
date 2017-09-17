@@ -1,26 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const MyTitle = function MyTitle(props) {
-    // return React.createElement('div', null, React.createElement('h1', { style: { color: props.color } }, props.title));
+/* Arrow functions have an implicit return so will get lint errors
+if you are returning immediately but use return statement. */
 
-    const style = { color: props.color };
-    return (
-        <div>
-            <h1 style={style}>{props.title}</h1>
+const App = () => (
+    <div className="app">
+        <div className="landing">
+            <h1> SVideo </h1>
+            <input type="text" placeholder="Search" />
+            <a> or Browse All </a>
         </div>
-    );
-};
+    </div>
+);
 
-const MyFirstComponent = function MyFirstComponent() {
-    return (
-        <div id="my-first-component">
-            <MyTitle title="game of thrones" color="Peru" />
-            <MyTitle title="whatever" color="Black" />
-            <MyTitle title="test" color="Cornsilk" />
-            <MyTitle title="test2" color="YellowGreen" />
-        </div>
-    );
-};
-
-render(<MyFirstComponent />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
