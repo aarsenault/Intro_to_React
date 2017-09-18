@@ -3,7 +3,13 @@ import React from 'react';
 import ShowCard from './ShowCard';
 import preload from '../data.json';
 
-const Search = () => <div className="search">{preload.shows.map(show => <ShowCard show={show} />)}</div>;
+const Search = () => (
+    <div className="search">
+        <div>
+            {preload.shows.map(show => <ShowCard key={show.imdbID} show={show} />)}
+        </div>
+    </div>
+    );
 
 // ShowCard.propTypes = {
 //     show: shape({
